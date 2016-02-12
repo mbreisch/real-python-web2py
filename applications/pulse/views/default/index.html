@@ -1,0 +1,15 @@
+{{extend 'layout.html'}}
+<h1>Pulse</h1>
+<p class="lead">Comparisons using Sentiment</p>
+<br>
+<form role="form">
+    <div class="form-group">
+        <input type="textarea" class="form-control" id="first_item" name="first_item" placeholder="enter the first item...">
+        <br>
+        <input type="textarea" class="form-control" id="second_item" name="second_item" placeholder="enter the second item...">
+        <br>
+        <input type="button" class="btn btn-success" value="submit" onclick="ajax('{{=URL('pulse')}}',['first_item','second_item'],'target')">
+    </div>
+</form>
+<br>
+<h2 id="target"></h2>
